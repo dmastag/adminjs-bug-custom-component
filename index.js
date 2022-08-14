@@ -7,6 +7,9 @@ const app = express()
 const adminJs = new AdminJS({
   databases: [],
   rootPath: '/admin',
+  dashboard: {
+    component: AdminJS.bundle('./my-dashboard-component')
+  },
 })
 
 const router = AdminJSExpress.buildRouter(adminJs)
